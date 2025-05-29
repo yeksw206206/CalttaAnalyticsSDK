@@ -1,0 +1,63 @@
+/*
+ * Created by dengshiwei on 2022/09/13.
+ * Copyright 2015－2022 Sensors Data Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: 'com.android.library'
+apply from: "../script_config/maven.gradle"
+if (rootProject.ext.publish.isEmbedCoreAAR) { //用于打本地包
+    apply plugin: 'com.kezong.fat-aar'
+}
+
+android {
+    compileSdkVersion rootProject.ext.buildConfig.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.buildConfig.minSdkVersion
+        targetSdkVersion rootProject.ext.buildConfig.targetSdkVersion
+        versionCode rootProject.ext.buildConfig.versionCode
+        versionName rootProject.ext.buildConfig.versionName
+        consumerProguardFiles 'proguard-rules.pro'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility rootProject.ext.buildConfig.sourceJavaVersion
+        targetCompatibility rootProject.ext.buildConfig.targetJavaVersion
+    }
+}
+
+dependencies {
+    testImplementation rootProject.ext.test.junit
+    testImplementation rootProject.ext.test.androidx_core
+    testImplementation rootProject.ext.test.androidx_runner
+    testImplementation rootProject.ext.test.androidx_rules
+    testImplementation rootProject.ext.test.androidx_junit
+    testImplementation rootProject.ext.androidx.google_material
+    testImplementation rootProject.ext.androidx.appcompat
+    if (rootProject.ext.publish.isEmbedCoreAAR) { //用于打本地包
+        embed project(':module_webview')
+        embed project(':module_common')
+    } else {
+        api project(':module_webview')
+        api project(':module_common')
+    }
+}

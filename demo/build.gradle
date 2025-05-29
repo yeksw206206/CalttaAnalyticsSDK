@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.jetbrains.kotlin.android'
+//添加 com.sensorsdata.analytics.android 插件
+apply plugin: 'com.sensorsdata.analytics.android'
+
+
+android {
+    compileSdkVersion rootProject.ext.buildConfig.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.sensorsdata.sdk.demo"
+        minSdkVersion rootProject.ext.buildConfig.minSdkVersion
+        targetSdkVersion rootProject.ext.buildConfig.targetSdkVersion
+        versionCode rootProject.ext.buildConfig.versionCode
+        versionName rootProject.ext.buildConfig.versionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+//    sensorsAnalytics {
+//        debug = true
+//    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['.jar', '.so'], dir: 'libs')
+    implementation rootProject.ext.androidx.appcompat
+    implementation rootProject.ext.androidx.google_material
+    implementation rootProject.ext.androidx.constraintlayout
+    implementation project(':SensorsAnalyticsSDK')
+    implementation  rootProject.ext.kotlins.kotlin_stdlib_jdk7
+//    implementation('com.sensorsdata.analytics.android:SensorsAnalyticsSDK:6.5.0') {
+//        exclude(group: 'com.sensorsdata.analytics.android', module: 'encrypt')
+//    }
+}

@@ -1,0 +1,128 @@
+<resources>
+    <item name="sensors_analytics_tag_view_webview" type="id" />
+    <item name="sensors_analytics_tag_view_fragment_name" type="id" />
+    <item name="sensors_analytics_tag_view_fragment_name2" type="id" />
+    <item name="sensors_analytics_tag_view_id" type="id" />
+    <item name="sensors_analytics_tag_view_rn_key" type="id"/>
+    <item name="sensors_analytics_tag_view_activity" type="id" />
+    <item name="sensors_analytics_tag_view_ignored" type="id" />
+
+    <!-- Debug Mode-->
+    <string name="sensors_analytics_debug_view_title">SDK Debug Mode</string>
+    <string name="sensors_analytics_debug_only">DEBUG_ONLY</string>
+    <string name="sensors_analytics_debug_and_track">DEBUG_AND_TRACK</string>
+    <string name="sensors_analytics_debug_name_default">DEBUG_OFF</string>
+    <string name="sensors_analytics_debug_name_only">Currently in DEBUG_ONLY mode (don\'t import data)</string>
+    <string name="sensors_analytics_debug_name_track">Currently in DEBUG_AND_TRACK mode (import data)</string>
+    <string name="sensors_analytics_debug_tip_off">The debug mode has been turned off, please scan the QR code again to turn it on</string>
+    <string name="sensors_analytics_debug_tip_only">Turn on the debug mode, verify the data, but do not import the data. After the App process is closed, the debug mode will be automatically turned off</string>
+    <string name="sensors_analytics_debug_tip_track">Turn on the debugging mode, verify the data, and import the data into Sensors Analysis; after closing the App process, the debugging mode will be automatically turned off</string>
+    <!-- encrypt fail -->
+    <string name="sensors_analytics_encrypt_sdk_fail">The Encrypt Module is not integrated correctly</string>
+
+    <!-- popwindow fail -->
+    <string name="sensors_analytics_popwindow_fail">The test popup failed to load, please confirm whether the network or project environment is normal.</string>
+
+    <!-- heat map -->
+    <string name="sensors_analytics_heatmap_dialog_error">The App\'s project is different from the computer browser, and App Clicks Analytics is not available</string>
+    <string name="sensors_analytics_heatmap_network_fail">The network request has been closed, and the App Clicks Analysis cannot be used. Please open it and try again.</string>
+    <string name="sensors_analytics_heatmap_sdk_fail">The SDK is not integrated correctly, please contact your technical staff to enable click analysis.</string>
+    <string name="sensors_analytics_heatmap">App Clicks Analysis</string>
+    <string name="sensors_analytics_heatmap_wifi_name">Connecting to App Clicks Analytics…</string>
+    <string name="sensors_analytics_heatmap_mobile_name">Connecting to the App Clicks Analytics, it is recommended to use it in a WiFi environment.</string>
+
+    <!-- visual -->
+    <string name="sensors_analytics_visual_dialog_error">The App\'s project is different from the computer browser, and Visualized AutoTrack is not available</string>
+    <string name="sensors_analytics_visual_network_fail">The network request has been closed, and the Visualized AutoTrack cannot used. Please open it and try again.</string>
+    <string name="sensors_analytics_visual_sdk_fail">The SDK is not integrated correctly, please contact your technical staff to enable click analysis.</string>
+    <string name="sensors_analytics_visual_heatmap_sdk_fail">SDK is not integrated correctly, please contact your technical staff to enable click analysis.</string>
+    <string name="sensors_analytics_visual">Visualized AutoTrack</string>
+    <string name="sensors_analytics_visual_wifi_name">Connecting to Visualized AutoTrack…</string>
+    <string name="sensors_analytics_visual_mobile_name">Connecting to the Visualized AutoTrack, it is recommended to use it in a WiFi environment.</string>
+
+    <!-- visual second -->
+    <string name="sensors_analytics_visual_sa_h5">The current page cannot use Visualized AutoTrack</string>
+    <string name="sensors_analytics_visual_sa_h5_error">This page is not integrated with the Web JS SDK or the version of the Web JS SDK is too low, please integrate the latest version of the Web JS SDK</string>
+    <string name="sensors_analytics_visual_sa_flutter_error">This page is not integrated with the Flutter SDK or the version of the Flutter SDK is too low, please integrate the latest version of the Flutter SDK</string>
+    <string name="sensors_analytics_visual_sa_h5_error_link">Configuration Document</string>
+    <string name="sensors_analytics_visual_property_error">Property element not found for %s Property, element_path = %s, element_position = %s</string>
+    <string name="sensors_analytics_visual_regex_error">Property %s Regex parsing failed, element_content = %s, regex = %s, propertyType = %s</string>
+    <string name="sensors_analytics_visual_switch_error">Switch Control</string>
+    <string name="sensors_analytics_visual_property_switch_error">The custom property operation configuration switch is closed</string>
+    <string name="sensors_analytics_visual_config_error">Get Configuration</string>
+    <string name="sensors_analytics_visual_event_error">Event Configuration</string>
+    <string name="sensors_analytics_visual_cache_error">The local cache does not contain the event configuration</string>
+    <string name="sensors_analytics_visual_getProperty_error">Get Property Element</string>
+    <string name="sensors_analytics_visual_parseProperty_error">Parse Property</string>
+    <string name="sensors_analytics_visual_other_error">Other Errors</string>
+    <string name="sensors_analytics_visual_cache_no_property_error">Local cache has no custom property configuration</string>
+    <string name="sensors_analytics_visual_appid_error">The locally cached AppId or Project is inconsistent with the current project</string>
+    <!-- verification code-->
+    <string name="sensors_analytics_visual_code_loading">Loading</string>
+    <string name="sensors_analytics_visual_code_title">Please enter the pairing code on the Sensors Analytics</string>
+
+    <!-- common dialog-->
+    <string name="sensors_analytics_common_cancel">Cancel</string>
+    <string name="sensors_analytics_common_continue">Continue</string>
+    <string name="sensors_analytics_common_title">Hint</string>
+    <string name="sensors_analytics_common_ok">OK</string>
+    <string name="sensors_analytics_common_no">Don\'t Remind</string>
+
+    <!-- remote config-->
+    <string name="sensors_analytics_remote_config">Start get remote config</string>
+    <string name="sensors_analytics_remote_fail">Failed to obtain remote config, please scan the QR code again later</string>
+    <string name="sensors_analytics_remote_version_error">Wrong Version</string>
+    <string name="sensors_analytics_remote_version_tip">The version from url obtained: %s, the version from the QR code: %s, please scan the QR code again later</string>
+    <string name="sensors_analytics_remote_succeed">The remote config is loaded and can be debugged through the Android Studio console log</string>
+    <string name="sensors_analytics_remote_other_error">Failed to get remote configuration, please try again later</string>
+    <string name="sensors_analytics_remote_tip_error_network">Network connected fails, please scan the QR code again for debugging</string>
+    <string name="sensors_analytics_remote_tip_error_disable_network">The switch enableNetworkRequest is false</string>
+    <string name="sensors_analytics_remote_tip_error_disable_remote">Remote configuration is disabled, please enable remote configuration</string>
+    <string name="sensors_analytics_remote_tip_error_project">The project integrated by the app is different from the project corresponding to the QR code, and cannot be debugged</string>
+    <string name="sensors_analytics_remote_tip_error_os">The operating system corresponding to the App and the QR code is different and cannot be debugged</string>
+    <string name="sensors_analytics_remote_tip_error_appid">The app is different from the app corresponding to the QR code and cannot be debugged</string>
+    <string name="sensors_analytics_remote_tip_error_qrcode">QR code information verification failed, please check whether the  remote config is configured correctly</string>
+
+    <!-- ad -->
+    <string name="sensors_analytics_ad_listener">The callback function is not set by calling the setDeepLinkCompletion method</string>
+    <string name="sensors_analytics_ad_channel">It is currently a channel package, and the joint debugging diagnostic tool cannot be used</string>
+    <string name="sensors_analytics_ad_error_url">The ServerURL is incorrect. The joint diagnostic tool cannot be used</string>
+    <string name="sensors_analytics_ad_error_retry">It cannot be reconnected. Please check whether the phone has been replaced</string>
+    <string name="sensors_analytics_ad_error_project">The project integrated by App is different from the project opened by computer browser, and the joint diagnostic tool cannot be used</string>
+    <string name="sensors_analytics_ad_dialog_title">Successfully enabled joint debugging mode</string>
+    <string name="sensors_analytics_ad_dialog_content">In this mode, there is no need to uninstall the App. Click the \"Activate\" button to trigger the activation repeatedly.</string>
+    <string name="sensors_analytics_ad_dialog_activate">Activate</string>
+    <string name="sensors_analytics_ad_dialog_cancel">Cancel</string>
+    <string name="sensors_analytics_ad_dialog_ok">OK</string>
+    <string name="sensors_analytics_ad_dialog_starting">Enable joint debugging mode</string>
+    <string name="sensors_analytics_ad_error_network">The current network is unavailable, please check the network!</string>
+    <string name="sensors_analytics_ad_error_request">Network exception, request failed!</string>
+    <string name="sensors_analytics_ad_error_whitelist">Failed to add whitelist request, please contact SensorsData technical support personnel to troubleshoot the problem!</string>
+    <string name="sensors_analytics_ad_error_debug_fail_title">The \"device code is empty\" is detected, the possible reasons are as follows, please check:</string>
+    <string name="sensors_analytics_ad_error_debug_fail_content">
+                "1. Deny \"READ_PHONE_STATE\" authorization when opening the app;\n" +
+                        "2. Whether to turn off the \"READ_PHONE_STATE\" authorization in the mobile phone system permission settings;\n" +
+                        "3. Please contact the developer to confirm whether the trackAppInstall interface is called after the \"READ_PHONE_STATE\" authorization\n\n " +
+                        "After troubleshooting, please scan the code again for joint debugging."</string>
+    <string name="sensors_analytics_ad_whitelist_platform_error">Please scan code using iOS device</string>
+    <string name="sensors_analytics_ad_whitelist_project_error">The project of device whitelist is different from the serverURL</string>
+    <string name="sensors_analytics_ad_whitelist_request_falied">Request failed, please scan the code again</string>
+    <string name="sensors_analytics_ad_whitelist_request_success">Request successful</string>
+    <string name="sensors_analytics_ad_create_link_no_network">No network connection</string>
+    <string name="sensors_analytics_ad_create_link_common_redirect_url_missing">Missing universal jump link</string>
+    <string name="sensors_analytics_ad_create_link_template_id_missing">Missing Slink Template ID</string>
+    <string name="sensors_analytics_ad_create_link_channel_name_missing">Missing channel name</string>
+    <string name="sensors_analytics_ad_create_link_token_missing">Token missing</string>
+    <string name="sensors_analytics_ad_create_link_custom_url_error">The custom domain name is not filled in or the format is incorrect</string>
+    <string name="sensors_analytics_ad_create_link_callback_missing">Callback not set</string>
+    <string name="sensors_analytics_ad_create_link_success">Successfully created Slink</string>
+    <string name="sensors_analytics_ad_create_link_response_data_error">The server returns data error</string>
+
+    <!-- encrypt dialog-->
+    <string name="sensors_analytics_encrypt_fail">Key verification failed, the selected key is invalid</string>
+    <string name="sensors_analytics_encrypt_disable">Encryption is not enabled in the current app, please enable encryption and try again</string>
+    <string name="sensors_analytics_encrypt_key_null">The key verification fails, and the App-side key is empty</string>
+    <string name="sensors_analytics_encrypt_pass">The key verification is passed, and the selected key is the same as the App-side key</string>
+    <string name="sensors_analytics_encrypt_verify_fail_type">"The key verification failed, and the selected key type is different from the app-side key type. Selected key symmetric algorithm type: %s" + "，asymmetricEncryptType: %s" +  "，App-side key symmetric algorithm type: %s" + "，asymmetricEncryptType: %s"</string>
+    <string name="sensors_analytics_encrypt_verify_fail_version">"The key verification failed, the selected key is not the same as the app-side key. Selected key version::%s" + "，App-side key version: %s"</string>
+</resources>
