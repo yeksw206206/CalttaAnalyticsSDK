@@ -1,0 +1,8 @@
+jdk:
+  - openjdk8
+
+env:
+  JITPACK: "true"
+
+install:
+  - ./gradlew :SensorsAnalyticsSDK:publishToMavenLocal
